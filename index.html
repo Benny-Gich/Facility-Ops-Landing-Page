@@ -308,221 +308,9 @@
                             </div>
                         </div>
 
-                        <!-- Main Composite Visual representing Picture4.png -->
-                        <div class="grid grid-cols-12 min-h-[390px]">
-                            <!-- Left Sidebar Navigation of the Mockup -->
-                            <div
-                                class="col-span-3 sm:col-span-2 bg-navy-900/95 border-r border-navy-800 p-3 flex flex-col justify-between">
-                                <div class="space-y-4">
-                                    <div
-                                        class="flex items-center gap-1.5 text-amber-400 font-display font-bold text-xs px-1">
-                                        <span class="w-2 h-2 rounded-sm bg-amber-400"></span>
-                                        <span class="truncate">FacilityOps</span>
-                                    </div>
-                                    <nav class="space-y-1 text-[11px]">
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 rounded-lg bg-amber-500/15 text-amber-400 border-l-2 border-amber-400 font-semibold">
-                                            <span>Home</span>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
-                                            <span>Live</span>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
-                                            <span>Routes</span>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
-                                            <span>Assets</span>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
-                                            <span>Findings</span>
-                                        </div>
-                                        <div
-                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
-                                            <span>Reports</span>
-                                        </div>
-                                    </nav>
-                                </div>
-                                <div class="pt-4 border-t border-navy-800 text-[10px] font-mono text-slate-400">
-                                    CRSC-HOU-01
-                                </div>
-                            </div>
-
-                            <!-- Center Dashboard UI (From Picture4.png) -->
-                            <div class="col-span-9 sm:col-span-7 bg-navy-950/90 p-4 space-y-4">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="text-sm font-display font-bold text-white">Data Center Overview</h3>
-                                    <span class="text-[11px] font-mono text-brand-cyan">Telemetry Sync: Active</span>
-                                </div>
-
-                                <!-- 3 KPI Cards: 19 Inspection Runs, 1,600 Observations, 4 Key Findings -->
-                                <div class="grid grid-cols-3 gap-2.5">
-                                    <div class="bg-navy-900/90 border border-navy-800 rounded-xl p-2.5">
-                                        <div class="flex items-center justify-between">
-                                            <span
-                                                class="text-lg sm:text-xl font-display font-extrabold text-white">19</span>
-                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                            </svg>
-                                        </div>
-                                        <p class="text-[10px] text-slate-400 mt-1">Inspection Runs</p>
-                                    </div>
-                                    <div class="bg-navy-900/90 border border-navy-800 rounded-xl p-2.5">
-                                        <div class="flex items-center justify-between">
-                                            <span
-                                                class="text-lg sm:text-xl font-display font-extrabold text-white">1,600</span>
-                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                            </svg>
-                                        </div>
-                                        <p class="text-[10px] text-slate-400 mt-1">Observations</p>
-                                    </div>
-                                    <div class="bg-navy-900/90 border border-amber-500/40 rounded-xl p-2.5">
-                                        <div class="flex items-center justify-between">
-                                            <span
-                                                class="text-lg sm:text-xl font-display font-extrabold text-amber-400">4</span>
-                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                            </svg>
-                                        </div>
-                                        <p class="text-[10px] text-slate-400 mt-1">Key Findings</p>
-                                    </div>
-                                </div>
-
-                                <!-- Recent Findings & Activity Chart Split -->
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                                    <!-- Recent Findings List -->
-                                    <div class="bg-navy-900/80 border border-navy-800 rounded-xl p-3 space-y-2.5">
-                                        <div class="text-[11px] font-semibold text-slate-200">Recent Findings</div>
-
-                                        <div
-                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-amber-500/30">
-                                            <span class="text-amber-400 mt-0.5">▲</span>
-                                            <div class="text-[11px] leading-tight">
-                                                <div class="font-semibold text-white">Cooling Unit Issue</div>
-                                                <div class="text-slate-400 text-[10px]">Elevated temp (+7.2°F) detected
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-navy-800">
-                                            <span class="text-amber-400 mt-0.5">▲</span>
-                                            <div class="text-[11px] leading-tight">
-                                                <div class="font-semibold text-white">Thermal Anomaly</div>
-                                                <div class="text-slate-400 text-[10px]">Potential hot spot identified
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div
-                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-navy-800">
-                                            <span class="text-emerald-400 mt-0.5">●</span>
-                                            <div class="text-[11px] leading-tight">
-                                                <div class="font-semibold text-white">Equipment Status</div>
-                                                <div class="text-slate-400 text-[10px]">Normal operation verified</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Inspection Activity Histogram -->
-                                    <div
-                                        class="bg-navy-900/80 border border-navy-800 rounded-xl p-3 flex flex-col justify-between">
-                                        <div class="flex items-center justify-between">
-                                            <span class="text-[11px] font-semibold text-slate-200">Inspection
-                                                Activity</span>
-                                            <span class="text-[10px] font-mono text-amber-400">19 Runs</span>
-                                        </div>
-                                        <div class="h-32 flex items-end gap-1.5 pt-4 px-1">
-                                            <div class="flex-1 bg-amber-500/40 hover:bg-amber-400 transition-all rounded-t h-[35%]"
-                                                title="Run 1-3"></div>
-                                            <div class="flex-1 bg-amber-500/50 hover:bg-amber-400 transition-all rounded-t h-[50%]"
-                                                title="Run 4-6"></div>
-                                            <div class="flex-1 bg-amber-500/40 hover:bg-amber-400 transition-all rounded-t h-[42%]"
-                                                title="Run 7-9"></div>
-                                            <div class="flex-1 bg-amber-500/60 hover:bg-amber-400 transition-all rounded-t h-[68%]"
-                                                title="Run 10-12"></div>
-                                            <div class="flex-1 bg-amber-500/80 hover:bg-amber-400 transition-all rounded-t h-[92%]"
-                                                title="Run 13-15"></div>
-                                            <div class="flex-1 bg-amber-400 hover:bg-brand-cyan transition-all rounded-t h-[78%]"
-                                                title="Run 16-17"></div>
-                                            <div class="flex-1 bg-brand-cyan hover:bg-sky-300 transition-all rounded-t h-[100%]"
-                                                title="Run 18-19"></div>
-                                        </div>
-                                        <div
-                                            class="flex justify-between text-[9px] font-mono text-slate-400 pt-1.5 border-t border-navy-800">
-                                            <span>Jul 29</span>
-                                            <span>Aug 2</span>
-                                            <span>Aug 6</span>
-                                            <span>Aug 9</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Right Server Hall + Autonomous Wheeled Robot Scene (From Picture4.png) -->
-                            <div
-                                class="hidden sm:flex sm:col-span-3 bg-gradient-to-b from-navy-900 via-navy-950 to-black border-l border-navy-800 p-3 flex-col justify-between items-center relative overflow-hidden">
-                                <!-- Server Rack LEDs -->
-                                <div class="w-full space-y-1.5 opacity-60">
-                                    <div class="flex justify-between px-1"><span
-                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span><span
-                                            class="w-1.5 h-1.5 rounded-full bg-amber-400"></span></div>
-                                    <div class="flex justify-between px-1"><span
-                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span><span
-                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span></div>
-                                    <div class="flex justify-between px-1"><span
-                                            class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span
-                                            class="w-1.5 h-1.5 rounded-full bg-amber-400"></span></div>
-                                </div>
-
-                                <!-- Autonomous Robot Illustration in Aisle -->
-                                <div class="my-auto flex flex-col items-center">
-                                    <svg viewBox="0 0 100 140" class="w-24 h-32">
-                                        <!-- Dual Optical/Thermal Sensor Head -->
-                                        <rect x="34" y="14" width="32" height="14" rx="4" fill="#E2E8F0"
-                                            stroke="#38BDF8" stroke-width="1.5" />
-                                        <circle cx="43" cy="21" r="3" fill="#0F172A" />
-                                        <circle cx="57" cy="21" r="3" fill="#38BDF8" />
-                                        <!-- Upper Torso Sensor Array -->
-                                        <rect x="24" y="32" width="52" height="16" rx="5" fill="#F8FAFC"
-                                            stroke="#475569" stroke-width="1.5" />
-                                        <rect x="30" y="37" width="40" height="6" rx="2" fill="#0F172A" />
-                                        <!-- Telescopic Mast -->
-                                        <rect x="44" y="48" width="12" height="40" fill="#1E293B" stroke="#475569" />
-                                        <!-- Wheeled Base -->
-                                        <rect x="18" y="88" width="64" height="28" rx="6" fill="#E2E8F0"
-                                            stroke="#475569" stroke-width="1.5" />
-                                        <rect x="20" y="100" width="60" height="14" rx="3" fill="#0F172A" />
-                                        <!-- Cyan Headlights -->
-                                        <rect x="24" y="104" width="14" height="4" rx="2" fill="#38BDF8" />
-                                        <rect x="62" y="104" width="14" height="4" rx="2" fill="#38BDF8" />
-                                        <!-- Wheels -->
-                                        <rect x="12" y="96" width="8" height="26" rx="3" fill="#090E1A"
-                                            stroke="#475569" />
-                                        <rect x="80" y="96" width="8" height="26" rx="3" fill="#090E1A"
-                                            stroke="#475569" />
-                                    </svg>
-                                    <span
-                                        class="text-[10px] font-mono text-brand-cyan bg-brand-cyan/10 px-2 py-0.5 rounded border border-brand-cyan/30">
-                                        Aisle Bot #01
-                                    </span>
-                                </div>
-
-                                <div class="text-[9px] font-mono text-slate-400 text-center">
-                                    ±1.1°F Verified
-                                </div>
-                            </div>
-                        </div>
+                        <img src="images/Picture4.png"
+                            alt="FacilityOps AI Data Center Overview dashboard with an inspection robot in the server aisle"
+                            class="w-full h-auto block" loading="eager">
 
                         <!-- Caption Bar for Picture4.png -->
                         <div
@@ -539,7 +327,7 @@
         </div>
     </section>
 
-    <!-- THE HOOK & SIDE-BY-SIDE COMPARISON SECTION (Picture1.jpg) -->
+    <!-- THE HOOK & SIDE-BY-SIDE COMPARISON SECTION (Picture1.png) -->
     <section class="py-16 lg:py-24 bg-navy-900 border-b border-navy-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
@@ -560,8 +348,10 @@
                 </p>
             </div>
 
-            <!-- Interactive Split Visual Banner representing Picture1.jpg -->
             <div class="rounded-2xl overflow-hidden border border-navy-700 shadow-2xl bg-navy-950">
+                <img src="images/Picture1.png"
+                    alt="Technician with a flashlight doing manual rounds beside an autonomous inspection robot"
+                    class="w-full h-auto max-h-[420px] object-cover border-b border-navy-700" loading="lazy">
                 <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-navy-700">
 
                     <!-- Left Side: Warm Amber Manual Inspection (Technician with Clipboard & Flashlight) -->
@@ -678,12 +468,12 @@
                     </div>
                 </div>
 
-                <!-- Caption Bar for Picture1.jpg -->
+                <!-- Caption Bar for Picture1.png -->
                 <div
                     class="bg-navy-900 px-6 py-3 border-t border-navy-800 flex items-center justify-between text-xs text-slate-300 italic">
                     <span>Replace repetitive manual clipboard rounds with consistent, autonomous multi sensor
                         scanning.</span>
-                    <span class="font-mono not-italic text-brand-cyan">Picture1.jpg</span>
+                    <span class="font-mono not-italic text-brand-cyan">Picture1.png</span>
                 </div>
             </div>
 
@@ -752,14 +542,15 @@
             <!-- 2x2 Feature Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-                <!-- CARD 1: Autonomous vs. Manual Inspection Baselines (with Picture3.jpg representation) -->
+                <!-- CARD 1: Autonomous vs. Manual Inspection Baselines (with Picture3.png representation) -->
                 <div
                     class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
                     <div>
-                        <!-- Visual Scene representing Picture3.jpg: Wheeled Robot between Server Racks and Power Panels -->
                         <div
-                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
-                            <!-- Left Electrical Switchgear Wall & Right Server Rack Wall Perspective -->
+                            class="h-56 bg-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <img src="images/Picture3.png" alt="Wheeled inspection robot patrolling a data center aisle"
+                                class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/60 to-transparent"></div>
                             <div class="z-10 space-y-2 max-w-[58%]">
                                 <span
                                     class="px-2.5 py-1 rounded bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan font-mono text-[11px]">
@@ -780,26 +571,6 @@
                                 </div>
                             </div>
 
-                            <!-- Wheeled Robot in Corridor Illustration (Picture3.jpg) -->
-                            <div class="relative flex flex-col items-center pr-2">
-                                <svg viewBox="0 0 110 130" class="w-28 h-32">
-                                    <!-- Corridor Perspective Lines -->
-                                    <line x1="5" y1="125" x2="35" y2="15" stroke="#334155" stroke-width="1" />
-                                    <line x1="105" y1="125" x2="75" y2="15" stroke="#38BDF8" stroke-width="1"
-                                        stroke-dasharray="3 2" />
-                                    <!-- Tall Mast Wheeled Robot -->
-                                    <rect x="41" y="12" width="22" height="10" rx="2" fill="#F8FAFC" stroke="#38BDF8"
-                                        stroke-width="1.2" />
-                                    <rect x="37" y="22" width="30" height="8" rx="2" fill="#1E293B" />
-                                    <rect x="48" y="30" width="8" height="46" fill="#090E1A" stroke="#475569" />
-                                    <!-- White/Black Chassis with LED strip -->
-                                    <rect x="28" y="76" width="48" height="34" rx="5" fill="#E2E8F0" stroke="#475569"
-                                        stroke-width="1.5" />
-                                    <rect x="30" y="90" width="44" height="18" rx="3" fill="#0F172A" />
-                                    <line x1="35" y1="86" x2="69" y2="86" stroke="#F8FAFC" stroke-width="3"
-                                        stroke-linecap="round" />
-                                </svg>
-                            </div>
                         </div>
 
                         <!-- Card Copy -->
@@ -817,7 +588,7 @@
                     <div
                         class="px-6 py-3 bg-navy-950/80 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400 italic">
                         <span>Autonomous floor runs across active white space and critical power halls.</span>
-                        <span class="font-mono not-italic text-brand-cyan ml-2 shrink-0">Picture3.jpg</span>
+                        <span class="font-mono not-italic text-brand-cyan ml-2 shrink-0">Picture3.png</span>
                     </div>
                 </div>
 
@@ -825,9 +596,11 @@
                 <div
                     class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
                     <div>
-                        <!-- Visual Scene representing Picture5.png: Quadruped Inspection Robot scanning Grey Switchgear Cabinets -->
                         <div
-                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            class="h-56 bg-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <img src="images/Picture5.png" alt="Quadruped inspection robot in front of switchgear cabinets"
+                                class="absolute inset-0 w-full h-full object-cover object-right" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/60 to-transparent"></div>
                             <div class="z-10 space-y-2 max-w-[56%]">
                                 <span
                                     class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-[11px]">
@@ -846,44 +619,6 @@
                                 </div>
                             </div>
 
-                            <!-- Quadruped Robot with Mounted Thermal Payload in front of Switchgear (Picture5.png) -->
-                            <div class="relative flex flex-col items-center pr-2">
-                                <svg viewBox="0 0 130 120" class="w-32 h-32">
-                                    <!-- Grey Switchgear Cabinets Background -->
-                                    <rect x="8" y="10" width="32" height="75" fill="#334155" stroke="#475569"
-                                        stroke-width="1.2" />
-                                    <rect x="40" y="10" width="32" height="75" fill="#334155" stroke="#475569"
-                                        stroke-width="1.2" />
-                                    <rect x="72" y="10" width="32" height="75" fill="#334155" stroke="#475569"
-                                        stroke-width="1.2" />
-                                    <!-- Meters & Indicator Lights on Switchgear -->
-                                    <rect x="18" y="20" width="10" height="10" fill="#0F172A" />
-                                    <rect x="50" y="20" width="10" height="10" fill="#0F172A" />
-                                    <circle cx="20" cy="42" r="2" fill="#EF4444" />
-                                    <circle cx="26" cy="42" r="2" fill="#10B981" />
-                                    <!-- Quadruped Robot Body -->
-                                    <rect x="48" y="64" width="46" height="16" rx="4" fill="#CBD5E1" stroke="#1E293B"
-                                        stroke-width="1.5" />
-                                    <!-- Thermal Screen on Quadruped Chest -->
-                                    <rect x="53" y="68" width="10" height="8" rx="1" fill="#38BDF8" />
-                                    <circle cx="58" cy="72" r="2.5" fill="#EF4444" />
-                                    <!-- Optical/Thermal Camera Payload on Mast -->
-                                    <rect x="58" y="44" width="24" height="11" rx="3" fill="#E2E8F0" stroke="#0F172A"
-                                        stroke-width="1.2" />
-                                    <circle cx="64" cy="49.5" r="3.5" fill="#0F172A" stroke="#38BDF8"
-                                        stroke-width="1.2" />
-                                    <line x1="70" y1="55" x2="70" y2="64" stroke="#0F172A" stroke-width="4" />
-                                    <!-- Articulated Quadruped Legs -->
-                                    <path d="M54 80 L48 96 L52 110" stroke="#0F172A" stroke-width="4"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M64 80 L60 95 L63 108" stroke="#1E293B" stroke-width="3.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M82 80 L78 96 L82 110" stroke="#0F172A" stroke-width="4"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M90 80 L88 94 L92 107" stroke="#1E293B" stroke-width="3.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
                         </div>
 
                         <!-- Card Copy -->
@@ -976,9 +711,11 @@
                 <div
                     class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
                     <div>
-                        <!-- Visual Scene representing Picture2.png: Technician terminating cyan fiber cables with Robot Coach -->
                         <div
-                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            class="h-56 bg-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <img src="images/Picture2.png" alt="Technician working on a fiber patch panel beside a robot coach"
+                                class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/60 to-transparent"></div>
                             <div class="z-10 space-y-2 max-w-[58%]">
                                 <span
                                     class="px-2.5 py-1 rounded bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono text-[11px]">
@@ -995,34 +732,6 @@
                                 </div>
                             </div>
 
-                            <!-- Technician + Robot Coach Illuminating Cyan Fiber Patch Panel SVG (Picture2.png) -->
-                            <div class="relative flex flex-col items-center pr-2">
-                                <svg viewBox="0 0 130 125" class="w-32 h-32">
-                                    <!-- Open Fiber Patch Rack on Right -->
-                                    <rect x="92" y="8" width="28" height="108" fill="#090E1A" stroke="#334155"
-                                        stroke-width="1.5" />
-                                    <!-- Cyan Fiber Optic Patch Cords -->
-                                    <path d="M94 28 Q82 45 94 65" stroke="#38BDF8" stroke-width="2.5" fill="none" />
-                                    <path d="M94 34 Q80 55 94 78" stroke="#06B6D4" stroke-width="2.5" fill="none" />
-                                    <rect x="95" y="24" width="20" height="6" fill="#38BDF8" />
-                                    <rect x="95" y="34" width="20" height="6" fill="#38BDF8" />
-                                    <rect x="95" y="44" width="20" height="6" fill="#38BDF8" />
-                                    <!-- Robot Coach Mast & Cyan Inspection Spotlight -->
-                                    <polygon points="75,28 95,18 95,52" fill="rgba(56, 189, 248, 0.35)" />
-                                    <rect x="64" y="22" width="12" height="8" rx="2" fill="#0F172A" stroke="#38BDF8"
-                                        stroke-width="1.5" />
-                                    <rect x="68" y="30" width="4" height="52" fill="#94A3B8" />
-                                    <rect x="54" y="82" width="32" height="24" rx="4" fill="#CBD5E1" stroke="#1E293B" />
-                                    <circle cx="60" cy="108" r="6" fill="#090E1A" />
-                                    <circle cx="80" cy="108" r="6" fill="#090E1A" />
-                                    <!-- Technician Working on Fiber Ports -->
-                                    <circle cx="34" cy="26" r="10" fill="#F1F5F9" />
-                                    <path d="M18 112 L22 44 L44 44 L48 112 Z" fill="#1E293B" />
-                                    <!-- Technician Arms reaching to Fiber Panel -->
-                                    <path d="M40 50 L65 48 L92 36" stroke="#CBD5E1" stroke-width="5"
-                                        stroke-linecap="round" fill="none" />
-                                </svg>
-                            </div>
                         </div>
 
                         <!-- Card Copy -->
