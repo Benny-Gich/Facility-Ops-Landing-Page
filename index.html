@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACILITYOPS.ai | Free 2026 CRSC Benchmark Kit</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#090E1A',
+                            900: '#0F172A',
+                            800: '#1E293B',
+                            700: '#334155',
+                            600: '#475569'
+                        },
+                        brand: {
+                            cyan: '#38BDF8',
+                            amber: '#F59E0B',
+                            emerald: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #F8FAFC;
+        }
+
+        /* Subtle technical grid background */
+        .bg-tech-grid {
+            background-size: 36px 36px;
+            background-image:
+                linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+        }
+
+        /* Subtle radial glow */
+        .hero-glow {
+            background: radial-gradient(circle at 75% 30%, rgba(56, 189, 248, 0.14) 0%, rgba(245, 158, 11, 0.05) 35%, rgba(15, 23, 42, 0) 70%);
+        }
+
+        /* Scanning beam animation */
+        @keyframes scanBeam {
+
+            0%,
+            100% {
+                transform: translateY(0%);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translateY(100%);
+                opacity: 0.85;
+            }
+        }
+
+        .animate-scan {
+            animation: scanBeam 4s ease-in-out infinite;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0F172A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-cyan selection:text-navy-900 overflow-x-hidden">
+
+    <!-- STICKY NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-navy-900/90 border-b border-navy-700/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Left: Crisp SVG Geometric Skyscraper + Upward Growth Arrow + Microchip Emblem + Wordmark -->
+            <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
+                <div
+                    class="w-12 h-12 rounded-xl bg-navy-800/90 border border-navy-700 flex items-center justify-center p-1.5 shadow-inner group-hover:border-brand-cyan/60 transition-colors">
+                    <svg viewBox="0 0 64 64" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Skyscraper Structure (White Linework) -->
+                        <path d="M8 56H28V20L20 14L12 20V56" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M18 15.5V10L28 4L38 10V28" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M28 4V24" stroke="#F8FAFC" stroke-width="2.5" stroke-linecap="round" />
+                        <!-- Building Windows -->
+                        <line x1="31" y1="12" x2="35" y2="14.5" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="31" y1="16.5" x2="35" y2="19" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="31" y1="21" x2="35" y2="23.5" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <!-- Upward Growth Arrow (White & Cyan Accent) -->
+                        <path d="M22 56V32L31 23L38 30L46 21L52 27L60 17" stroke="#38BDF8" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M53 17H60V24" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <!-- AI Microchip Grid Emblem (Cyan & White) -->
+                        <rect x="33" y="37" width="14" height="14" rx="2" stroke="#38BDF8" stroke-width="2.2"
+                            fill="#0F172A" />
+                        <rect x="37" y="41" width="6" height="6" rx="1" fill="#38BDF8" />
+                        <!-- Chip Pins -->
+                        <line x1="28" y1="40" x2="33" y2="40" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="28" y1="44" x2="33" y2="44" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="28" y1="48" x2="33" y2="48" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="47" y1="40" x2="54" y2="40" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="47" y1="44" x2="54" y2="44" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="47" y1="48" x2="54" y2="48" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="36" y1="32" x2="36" y2="37" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="40" y1="32" x2="40" y2="37" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="44" y1="32" x2="44" y2="37" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="36" y1="51" x2="36" y2="56" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="40" y1="51" x2="40" y2="56" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <line x1="44" y1="51" x2="44" y2="56" stroke="#F8FAFC" stroke-width="2"
+                            stroke-linecap="round" />
+                        <!-- Base Line -->
+                        <line x1="6" y1="56" x2="58" y2="56" stroke="#38BDF8" stroke-width="2.2"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white">
+                        FACILITYOPS<span class="text-brand-cyan">.ai</span>
+                    </span>
+                    <span class="text-[11px] font-mono uppercase tracking-widest text-slate-400 hidden sm:inline">
+                        Autonomous Inspection & Training
+                    </span>
+                </div>
+            </a>
+
+            <!-- Right: Status Indicator Pill & Anchor CTA -->
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div
+                    class="hidden md:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-navy-800/90 border border-navy-700 text-xs font-medium text-slate-300">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <span>CRSC Houston Pilot Validated</span>
+                </div>
+
+                <a href="#hero-optin"
+                    class="px-4 py-2.5 rounded-lg bg-brand-cyan/15 hover:bg-brand-cyan/25 text-brand-cyan border border-brand-cyan/40 font-semibold text-xs sm:text-sm transition-all shadow-sm hover:shadow-brand-cyan/10">
+                    Get the Free Kit
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (2-Column Above the Fold) -->
+    <section class="relative bg-tech-grid hero-glow pt-10 pb-16 lg:pt-16 lg:pb-24 border-b border-navy-700/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                <!-- Left Column: High-Conversion Copy & Opt-In Stack -->
+                <div class="lg:col-span-6 space-y-6">
+                    <!-- Eyebrow Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-mono font-semibold tracking-wider uppercase">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span>FREE 2026 BENCHMARK KIT + WEEKLY OPS BRIEFING</span>
+                    </div>
+
+                    <!-- Headline -->
+                    <h1
+                        class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.15] tracking-tight">
+                        How Does Your Facility Stack Up? <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-sky-300 to-white">Get
+                            the Free 2026 CRSC Benchmark Kit.</span>
+                    </h1>
+
+                    <!-- Subheadline -->
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                        Join facility executives receiving weekly AI operational playbooks and get instant access to our
+                        complete CRSC scoring templates, cost per square foot baselines, and audit checklists.
+                    </p>
+
+                    <!-- Quick Kit Asset Pills -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1">
+                        <div
+                            class="flex items-center gap-2 text-xs text-slate-300 bg-navy-800/70 border border-navy-700/80 rounded-lg px-3 py-2">
+                            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>1,600+ Obs. Baselines</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs text-slate-300 bg-navy-800/70 border border-navy-700/80 rounded-lg px-3 py-2">
+                            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>NFPA 70B Checklists</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-xs text-slate-300 bg-navy-800/70 border border-navy-700/80 rounded-lg px-3 py-2 col-span-2 sm:col-span-1">
+                            <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>Fiber Grading Rubric</span>
+                        </div>
+                    </div>
+
+                    <!-- Embedded High-Conversion Opt-In Form -->
+                    <div id="hero-optin" class="pt-2">
+                        <form id="topOptInForm" onsubmit="handleKitUnlock(event, 'topEmailInput')"
+                            class="bg-navy-800/90 p-3 sm:p-4 rounded-2xl border border-navy-700 shadow-2xl space-y-3">
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <div class="relative flex-1">
+                                    <label for="topEmailInput" class="sr-only">Work Email Address</label>
+                                    <input type="email" id="topEmailInput" required
+                                        placeholder="Enter your work email address..."
+                                        class="w-full h-13 px-4 py-3.5 rounded-xl bg-navy-900 border border-navy-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20 transition-all">
+                                </div>
+                                <button type="submit"
+                                    class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-sky-400 hover:from-sky-400 hover:to-brand-cyan text-navy-950 font-display font-bold text-sm sm:text-base tracking-tight shadow-lg shadow-brand-cyan/20 hover:shadow-brand-cyan/35 transition-all flex items-center justify-center gap-2 shrink-0 cursor-pointer">
+                                    <span>Send Me the Free CRSC Benchmark Kit</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Micro Proof & Trust Line -->
+                            <p class="text-xs text-slate-400 leading-relaxed pl-1">
+                                100% free instant download. Includes early access updates on <strong
+                                    class="text-slate-200 font-medium">Pilot 3 (Online Technician Courses)</strong>
+                                &amp; <strong class="text-slate-200 font-medium">Pilot 4 (Robot Supervised Fiber
+                                    Training)</strong>. Unsubscribe in one click.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Hero Visual representing Picture4.png (Live FacilityOps AI Dashboard + Robot in Server Aisle) -->
+                <div class="lg:col-span-6">
+                    <div
+                        class="relative rounded-2xl bg-navy-950 border border-navy-700/90 shadow-2xl overflow-hidden group">
+
+                        <!-- Ambient Server Rack Background Header Bar -->
+                        <div
+                            class="bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 px-4 py-3 border-b border-navy-700 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-400/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                                <span class="ml-2 text-xs font-mono text-slate-400">FacilityOps AI — Data Center
+                                    Overview (CRSC Houston)</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>System Online</span>
+                            </div>
+                        </div>
+
+                        <!-- Main Composite Visual representing Picture4.png -->
+                        <div class="grid grid-cols-12 min-h-[390px]">
+                            <!-- Left Sidebar Navigation of the Mockup -->
+                            <div
+                                class="col-span-3 sm:col-span-2 bg-navy-900/95 border-r border-navy-800 p-3 flex flex-col justify-between">
+                                <div class="space-y-4">
+                                    <div
+                                        class="flex items-center gap-1.5 text-amber-400 font-display font-bold text-xs px-1">
+                                        <span class="w-2 h-2 rounded-sm bg-amber-400"></span>
+                                        <span class="truncate">FacilityOps</span>
+                                    </div>
+                                    <nav class="space-y-1 text-[11px]">
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 rounded-lg bg-amber-500/15 text-amber-400 border-l-2 border-amber-400 font-semibold">
+                                            <span>Home</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
+                                            <span>Live</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
+                                            <span>Routes</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
+                                            <span>Assets</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
+                                            <span>Findings</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-2 px-2 py-1.5 text-slate-400 hover:text-slate-200">
+                                            <span>Reports</span>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="pt-4 border-t border-navy-800 text-[10px] font-mono text-slate-400">
+                                    CRSC-HOU-01
+                                </div>
+                            </div>
+
+                            <!-- Center Dashboard UI (From Picture4.png) -->
+                            <div class="col-span-9 sm:col-span-7 bg-navy-950/90 p-4 space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-sm font-display font-bold text-white">Data Center Overview</h3>
+                                    <span class="text-[11px] font-mono text-brand-cyan">Telemetry Sync: Active</span>
+                                </div>
+
+                                <!-- 3 KPI Cards: 19 Inspection Runs, 1,600 Observations, 4 Key Findings -->
+                                <div class="grid grid-cols-3 gap-2.5">
+                                    <div class="bg-navy-900/90 border border-navy-800 rounded-xl p-2.5">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="text-lg sm:text-xl font-display font-extrabold text-white">19</span>
+                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-[10px] text-slate-400 mt-1">Inspection Runs</p>
+                                    </div>
+                                    <div class="bg-navy-900/90 border border-navy-800 rounded-xl p-2.5">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="text-lg sm:text-xl font-display font-extrabold text-white">1,600</span>
+                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-[10px] text-slate-400 mt-1">Observations</p>
+                                    </div>
+                                    <div class="bg-navy-900/90 border border-amber-500/40 rounded-xl p-2.5">
+                                        <div class="flex items-center justify-between">
+                                            <span
+                                                class="text-lg sm:text-xl font-display font-extrabold text-amber-400">4</span>
+                                            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                            </svg>
+                                        </div>
+                                        <p class="text-[10px] text-slate-400 mt-1">Key Findings</p>
+                                    </div>
+                                </div>
+
+                                <!-- Recent Findings & Activity Chart Split -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                                    <!-- Recent Findings List -->
+                                    <div class="bg-navy-900/80 border border-navy-800 rounded-xl p-3 space-y-2.5">
+                                        <div class="text-[11px] font-semibold text-slate-200">Recent Findings</div>
+
+                                        <div
+                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-amber-500/30">
+                                            <span class="text-amber-400 mt-0.5">▲</span>
+                                            <div class="text-[11px] leading-tight">
+                                                <div class="font-semibold text-white">Cooling Unit Issue</div>
+                                                <div class="text-slate-400 text-[10px]">Elevated temp (+7.2°F) detected
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-navy-800">
+                                            <span class="text-amber-400 mt-0.5">▲</span>
+                                            <div class="text-[11px] leading-tight">
+                                                <div class="font-semibold text-white">Thermal Anomaly</div>
+                                                <div class="text-slate-400 text-[10px]">Potential hot spot identified
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div
+                                            class="flex items-start gap-2 p-2 rounded-lg bg-navy-950/90 border border-navy-800">
+                                            <span class="text-emerald-400 mt-0.5">●</span>
+                                            <div class="text-[11px] leading-tight">
+                                                <div class="font-semibold text-white">Equipment Status</div>
+                                                <div class="text-slate-400 text-[10px]">Normal operation verified</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Inspection Activity Histogram -->
+                                    <div
+                                        class="bg-navy-900/80 border border-navy-800 rounded-xl p-3 flex flex-col justify-between">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-[11px] font-semibold text-slate-200">Inspection
+                                                Activity</span>
+                                            <span class="text-[10px] font-mono text-amber-400">19 Runs</span>
+                                        </div>
+                                        <div class="h-32 flex items-end gap-1.5 pt-4 px-1">
+                                            <div class="flex-1 bg-amber-500/40 hover:bg-amber-400 transition-all rounded-t h-[35%]"
+                                                title="Run 1-3"></div>
+                                            <div class="flex-1 bg-amber-500/50 hover:bg-amber-400 transition-all rounded-t h-[50%]"
+                                                title="Run 4-6"></div>
+                                            <div class="flex-1 bg-amber-500/40 hover:bg-amber-400 transition-all rounded-t h-[42%]"
+                                                title="Run 7-9"></div>
+                                            <div class="flex-1 bg-amber-500/60 hover:bg-amber-400 transition-all rounded-t h-[68%]"
+                                                title="Run 10-12"></div>
+                                            <div class="flex-1 bg-amber-500/80 hover:bg-amber-400 transition-all rounded-t h-[92%]"
+                                                title="Run 13-15"></div>
+                                            <div class="flex-1 bg-amber-400 hover:bg-brand-cyan transition-all rounded-t h-[78%]"
+                                                title="Run 16-17"></div>
+                                            <div class="flex-1 bg-brand-cyan hover:bg-sky-300 transition-all rounded-t h-[100%]"
+                                                title="Run 18-19"></div>
+                                        </div>
+                                        <div
+                                            class="flex justify-between text-[9px] font-mono text-slate-400 pt-1.5 border-t border-navy-800">
+                                            <span>Jul 29</span>
+                                            <span>Aug 2</span>
+                                            <span>Aug 6</span>
+                                            <span>Aug 9</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Server Hall + Autonomous Wheeled Robot Scene (From Picture4.png) -->
+                            <div
+                                class="hidden sm:flex sm:col-span-3 bg-gradient-to-b from-navy-900 via-navy-950 to-black border-l border-navy-800 p-3 flex-col justify-between items-center relative overflow-hidden">
+                                <!-- Server Rack LEDs -->
+                                <div class="w-full space-y-1.5 opacity-60">
+                                    <div class="flex justify-between px-1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span><span
+                                            class="w-1.5 h-1.5 rounded-full bg-amber-400"></span></div>
+                                    <div class="flex justify-between px-1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span><span
+                                            class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span></div>
+                                    <div class="flex justify-between px-1"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span
+                                            class="w-1.5 h-1.5 rounded-full bg-amber-400"></span></div>
+                                </div>
+
+                                <!-- Autonomous Robot Illustration in Aisle -->
+                                <div class="my-auto flex flex-col items-center">
+                                    <svg viewBox="0 0 100 140" class="w-24 h-32">
+                                        <!-- Dual Optical/Thermal Sensor Head -->
+                                        <rect x="34" y="14" width="32" height="14" rx="4" fill="#E2E8F0"
+                                            stroke="#38BDF8" stroke-width="1.5" />
+                                        <circle cx="43" cy="21" r="3" fill="#0F172A" />
+                                        <circle cx="57" cy="21" r="3" fill="#38BDF8" />
+                                        <!-- Upper Torso Sensor Array -->
+                                        <rect x="24" y="32" width="52" height="16" rx="5" fill="#F8FAFC"
+                                            stroke="#475569" stroke-width="1.5" />
+                                        <rect x="30" y="37" width="40" height="6" rx="2" fill="#0F172A" />
+                                        <!-- Telescopic Mast -->
+                                        <rect x="44" y="48" width="12" height="40" fill="#1E293B" stroke="#475569" />
+                                        <!-- Wheeled Base -->
+                                        <rect x="18" y="88" width="64" height="28" rx="6" fill="#E2E8F0"
+                                            stroke="#475569" stroke-width="1.5" />
+                                        <rect x="20" y="100" width="60" height="14" rx="3" fill="#0F172A" />
+                                        <!-- Cyan Headlights -->
+                                        <rect x="24" y="104" width="14" height="4" rx="2" fill="#38BDF8" />
+                                        <rect x="62" y="104" width="14" height="4" rx="2" fill="#38BDF8" />
+                                        <!-- Wheels -->
+                                        <rect x="12" y="96" width="8" height="26" rx="3" fill="#090E1A"
+                                            stroke="#475569" />
+                                        <rect x="80" y="96" width="8" height="26" rx="3" fill="#090E1A"
+                                            stroke="#475569" />
+                                    </svg>
+                                    <span
+                                        class="text-[10px] font-mono text-brand-cyan bg-brand-cyan/10 px-2 py-0.5 rounded border border-brand-cyan/30">
+                                        Aisle Bot #01
+                                    </span>
+                                </div>
+
+                                <div class="text-[9px] font-mono text-slate-400 text-center">
+                                    ±1.1°F Verified
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caption Bar for Picture4.png -->
+                        <div
+                            class="bg-navy-900/95 px-4 py-3 border-t border-navy-800 flex items-center justify-between text-xs text-slate-300 italic">
+                            <span>Live telemetry from the Houston CRSC Data Center pilot: 19 autonomous runs and 1,600+
+                                categorized observations.</span>
+                            <span
+                                class="text-[11px] font-mono not-italic text-brand-cyan shrink-0 ml-2">Picture4.png</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THE HOOK & SIDE-BY-SIDE COMPARISON SECTION (Picture1.jpg) -->
+    <section class="py-16 lg:py-24 bg-navy-900 border-b border-navy-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <!-- Opening Hook Paragraph -->
+            <div class="text-center max-w-4xl mx-auto space-y-5">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono uppercase">
+                    Operational Bottleneck Analysis
+                </div>
+                <p class="text-xl sm:text-2xl text-slate-200 leading-relaxed font-normal">
+                    Every critical facility and data center leader is fighting the same two bottlenecks right now:
+                    <strong
+                        class="text-white font-semibold underline decoration-amber-400/70 decoration-2 underline-offset-4">senior
+                        L3 engineers losing hours to manual thermal and visual floor walks</strong>, and <strong
+                        class="text-white font-semibold underline decoration-brand-cyan/70 decoration-2 underline-offset-4">new
+                        technicians requiring weeks of hands on shadowing before they can safely touch a rack or
+                        panel</strong>.
+                </p>
+            </div>
+
+            <!-- Interactive Split Visual Banner representing Picture1.jpg -->
+            <div class="rounded-2xl overflow-hidden border border-navy-700 shadow-2xl bg-navy-950">
+                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-navy-700">
+
+                    <!-- Left Side: Warm Amber Manual Inspection (Technician with Clipboard & Flashlight) -->
+                    <div class="p-6 sm:p-8 bg-gradient-to-br from-amber-950/30 via-navy-950 to-navy-900 relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <span
+                                class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-mono font-semibold uppercase">
+                                Legacy Workflow: Manual Rounds
+                            </span>
+                            <span class="text-xs font-mono text-amber-400">High L3 Labor Drain</span>
+                        </div>
+
+                        <!-- Visual Scene of Technician with Clipboard & Flashlight in Server Aisle -->
+                        <div
+                            class="h-48 rounded-xl bg-navy-900/90 border border-amber-500/25 p-4 flex items-center justify-between relative overflow-hidden mb-5">
+                            <!-- Warm Server Rack Bars -->
+                            <div class="space-y-2 z-10">
+                                <div class="flex items-center gap-2 text-xs font-mono text-amber-300">
+                                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                                    <span>Spot Check Only</span>
+                                </div>
+                                <div class="text-2xl font-display font-bold text-white">45–90 Mins</div>
+                                <div class="text-xs text-slate-400">Per manual floor walk &amp; log entry</div>
+                                <div class="pt-2 flex flex-wrap gap-1.5">
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Clipboard
+                                        Notes</span>
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">Inconsistent
+                                        Angles</span>
+                                </div>
+                            </div>
+
+                            <!-- Technician Silhouette SVG -->
+                            <svg viewBox="0 0 120 120" class="w-28 h-28 shrink-0 opacity-90">
+                                <!-- Server Rack Frame -->
+                                <rect x="85" y="10" width="25" height="100" fill="#1E293B" stroke="#F59E0B"
+                                    stroke-width="1" />
+                                <!-- Flashlight Beam -->
+                                <polygon points="62,32 85,20 85,48" fill="rgba(245, 158, 11, 0.35)" />
+                                <!-- Technician Head & Shoulders -->
+                                <circle cx="42" cy="28" r="10" fill="#94A3B8" />
+                                <path d="M24 95 L28 45 Q42 40 56 45 L60 95 Z" fill="#334155" stroke="#64748B"
+                                    stroke-width="1.5" />
+                                <!-- Clipboard in left hand -->
+                                <rect x="14" y="54" width="16" height="22" rx="2" transform="rotate(-15 14 54)"
+                                    fill="#F8FAFC" />
+                                <!-- Flashlight in right hand -->
+                                <rect x="54" y="30" width="10" height="5" rx="1" fill="#F59E0B" />
+                            </svg>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Senior engineers walk aisles with handheld flashlights and clipboards, logging sporadic
+                            readings that miss gradual thermal drift between shifts.
+                        </p>
+                    </div>
+
+                    <!-- Right Side: Cool Cyan Autonomous Multi-Sensor Scanning -->
+                    <div class="p-6 sm:p-8 bg-gradient-to-bl from-sky-950/35 via-navy-950 to-navy-900 relative">
+                        <div class="flex items-center justify-between mb-6">
+                            <span
+                                class="px-3 py-1 rounded-full bg-brand-cyan/15 border border-brand-cyan/40 text-brand-cyan text-xs font-mono font-semibold uppercase">
+                                FacilityOps AI: Autonomous Runs
+                            </span>
+                            <span class="text-xs font-mono text-emerald-400">Zero Manual Intervention</span>
+                        </div>
+
+                        <!-- Visual Scene of Autonomous Robot Scanning Server Rack with Cyan Beam -->
+                        <div
+                            class="h-48 rounded-xl bg-navy-900/90 border border-brand-cyan/30 p-4 flex items-center justify-between relative overflow-hidden mb-5">
+                            <div class="space-y-2 z-10">
+                                <div class="flex items-center gap-2 text-xs font-mono text-brand-cyan">
+                                    <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
+                                    <span>19 Autonomous Runs</span>
+                                </div>
+                                <div class="text-2xl font-display font-bold text-white">1,600+ Obs.</div>
+                                <div class="text-xs text-slate-300">Captured &amp; categorized automatically</div>
+                                <div class="pt-2 flex flex-wrap gap-1.5">
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30">±1.1°F
+                                        Verified</span>
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30">24/7
+                                        Repeatability</span>
+                                </div>
+                            </div>
+
+                            <!-- Robot Scanning Rack SVG -->
+                            <svg viewBox="0 0 120 120" class="w-28 h-28 shrink-0">
+                                <!-- Server Rack Right -->
+                                <rect x="85" y="10" width="25" height="100" fill="#0F172A" stroke="#38BDF8"
+                                    stroke-width="1.2" />
+                                <line x1="89" y1="22" x2="105" y2="22" stroke="#10B981" stroke-width="2" />
+                                <line x1="89" y1="35" x2="105" y2="35" stroke="#38BDF8" stroke-width="2" />
+                                <line x1="89" y1="48" x2="105" y2="48" stroke="#10B981" stroke-width="2" />
+                                <!-- Cyan Optical/Thermal Cone -->
+                                <polygon points="55,26 85,12 85,55" fill="rgba(56, 189, 248, 0.30)" />
+                                <!-- Telescopic Robot -->
+                                <rect x="34" y="20" width="22" height="10" rx="3" fill="#F8FAFC" stroke="#38BDF8"
+                                    stroke-width="1.5" />
+                                <rect x="42" y="30" width="6" height="48" fill="#334155" />
+                                <rect x="26" y="78" width="38" height="20" rx="4" fill="#E2E8F0" />
+                                <rect x="30" y="85" width="30" height="4" rx="1" fill="#38BDF8" />
+                                <circle cx="32" cy="100" r="6" fill="#090E1A" stroke="#475569" stroke-width="1.5" />
+                                <circle cx="58" cy="100" r="6" fill="#090E1A" stroke="#475569" stroke-width="1.5" />
+                            </svg>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Continuous multi-sensor sweeps across active white space and critical power halls isolate
+                            thermal drift before alarms trigger.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Caption Bar for Picture1.jpg -->
+                <div
+                    class="bg-navy-900 px-6 py-3 border-t border-navy-800 flex items-center justify-between text-xs text-slate-300 italic">
+                    <span>Replace repetitive manual clipboard rounds with consistent, autonomous multi sensor
+                        scanning.</span>
+                    <span class="font-mono not-italic text-brand-cyan">Picture1.jpg</span>
+                </div>
+            </div>
+
+            <!-- Houston CRSC Validation Narrative -->
+            <div class="bg-navy-800/70 border border-navy-700 rounded-2xl p-6 sm:p-8 space-y-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-8 space-y-4 text-slate-200 text-base sm:text-lg leading-relaxed">
+                        <p>
+                            During our field validated pilot at the <strong class="text-white font-semibold">CRSC Data
+                                Center in Houston, TX</strong>, our autonomous multi sensor robot completed 19
+                            autonomous runs across active white space and critical power halls. It captured <strong
+                                class="text-brand-cyan font-semibold">1,600+ thermal and visual observations</strong>
+                            without manual intervention and isolated a failing condenser running <strong
+                                class="text-amber-400 font-semibold">7.2°F warmer</strong> than its counterpart unit
+                            (independently verified within <strong class="text-emerald-400 font-semibold">1.1°F</strong>
+                            by handheld thermography).
+                        </p>
+                        <p class="text-slate-300">
+                            We packaged the exact telemetry baselines, inspection standards, and technician grading
+                            rubrics from those live runs into a single, ready to use <strong
+                                class="text-white font-semibold">2026 CRSC Benchmark Kit</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Validation Stat Highlight Box -->
+                    <div class="lg:col-span-4 bg-navy-900 border border-navy-700 rounded-xl p-5 space-y-3">
+                        <div class="text-xs font-mono uppercase tracking-wider text-brand-cyan">CRSC Houston Field Proof
+                        </div>
+                        <div class="flex items-baseline justify-between border-b border-navy-800 pb-2.5">
+                            <span class="text-xs text-slate-400">Condenser Delta Isolated</span>
+                            <span class="text-xl font-mono font-bold text-amber-400">+7.2°F</span>
+                        </div>
+                        <div class="flex items-baseline justify-between border-b border-navy-800 pb-2.5">
+                            <span class="text-xs text-slate-400">Handheld Verification</span>
+                            <span class="text-xl font-mono font-bold text-emerald-400">±1.1°F</span>
+                        </div>
+                        <div class="flex items-baseline justify-between">
+                            <span class="text-xs text-slate-400">Manual Intervention</span>
+                            <span class="text-xl font-mono font-bold text-brand-cyan">0 Hrs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHAT YOU UNLOCK INSIDE THE FREE CRSC BENCHMARK KIT (4 Visual Feature Cards) -->
+    <section class="py-16 lg:py-24 bg-navy-950 bg-tech-grid border-b border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-14">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-mono uppercase">
+                    Inside the 2026 Operational Toolkit
+                </div>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight">
+                    What You Unlock Inside the Free CRSC Benchmark Kit
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Four field tested operational templates and rubrics built directly from our Houston CRSC deployment.
+                </p>
+            </div>
+
+            <!-- 2x2 Feature Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- CARD 1: Autonomous vs. Manual Inspection Baselines (with Picture3.jpg representation) -->
+                <div
+                    class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
+                    <div>
+                        <!-- Visual Scene representing Picture3.jpg: Wheeled Robot between Server Racks and Power Panels -->
+                        <div
+                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <!-- Left Electrical Switchgear Wall & Right Server Rack Wall Perspective -->
+                            <div class="z-10 space-y-2 max-w-[58%]">
+                                <span
+                                    class="px-2.5 py-1 rounded bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan font-mono text-[11px]">
+                                    TEMPLATE 01 • EXCEL &amp; PDF
+                                </span>
+                                <div class="text-sm font-display font-bold text-white pt-1">
+                                    White Space &amp; Power Hall Telemetry
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 pt-1">
+                                    <div class="bg-navy-950/90 border border-navy-800 p-2 rounded-lg">
+                                        <div class="text-[10px] text-slate-400">Manual MTTD</div>
+                                        <div class="text-xs font-mono font-bold text-amber-400">14.5 Hours</div>
+                                    </div>
+                                    <div class="bg-navy-950/90 border border-brand-cyan/30 p-2 rounded-lg">
+                                        <div class="text-[10px] text-slate-400">CRSC Auto MTTD</div>
+                                        <div class="text-xs font-mono font-bold text-brand-cyan">42 Mins</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Wheeled Robot in Corridor Illustration (Picture3.jpg) -->
+                            <div class="relative flex flex-col items-center pr-2">
+                                <svg viewBox="0 0 110 130" class="w-28 h-32">
+                                    <!-- Corridor Perspective Lines -->
+                                    <line x1="5" y1="125" x2="35" y2="15" stroke="#334155" stroke-width="1" />
+                                    <line x1="105" y1="125" x2="75" y2="15" stroke="#38BDF8" stroke-width="1"
+                                        stroke-dasharray="3 2" />
+                                    <!-- Tall Mast Wheeled Robot -->
+                                    <rect x="41" y="12" width="22" height="10" rx="2" fill="#F8FAFC" stroke="#38BDF8"
+                                        stroke-width="1.2" />
+                                    <rect x="37" y="22" width="30" height="8" rx="2" fill="#1E293B" />
+                                    <rect x="48" y="30" width="8" height="46" fill="#090E1A" stroke="#475569" />
+                                    <!-- White/Black Chassis with LED strip -->
+                                    <rect x="28" y="76" width="48" height="34" rx="5" fill="#E2E8F0" stroke="#475569"
+                                        stroke-width="1.5" />
+                                    <rect x="30" y="90" width="44" height="18" rx="3" fill="#0F172A" />
+                                    <line x1="35" y1="86" x2="69" y2="86" stroke="#F8FAFC" stroke-width="3"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card Copy -->
+                        <div class="p-6 sm:p-7 space-y-3">
+                            <h3 class="font-display font-bold text-xl text-white">
+                                Autonomous vs. Manual Inspection Baselines
+                            </h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Compare your current round times, drift telemetry, and Mean Time to Detect (MTTD)
+                                against real data from 1,600+ categorized CRSC observations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="px-6 py-3 bg-navy-950/80 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400 italic">
+                        <span>Autonomous floor runs across active white space and critical power halls.</span>
+                        <span class="font-mono not-italic text-brand-cyan ml-2 shrink-0">Picture3.jpg</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2: NFPA 70B Audit & Defect Checklists (with Picture5.png representation) -->
+                <div
+                    class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
+                    <div>
+                        <!-- Visual Scene representing Picture5.png: Quadruped Inspection Robot scanning Grey Switchgear Cabinets -->
+                        <div
+                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <div class="z-10 space-y-2 max-w-[56%]">
+                                <span
+                                    class="px-2.5 py-1 rounded bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-[11px]">
+                                    TEMPLATE 02 • NFPA 70B STANDARD
+                                </span>
+                                <div class="text-sm font-display font-bold text-white pt-1">
+                                    Switchgear &amp; Critical Power Audits
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-1">
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-navy-950 text-slate-300 border border-navy-700">Phase
+                                        Disconnections</span>
+                                    <span
+                                        class="text-[10px] font-mono px-2 py-0.5 rounded bg-navy-950 text-slate-300 border border-navy-700">LV/MV
+                                        Switchgear</span>
+                                </div>
+                            </div>
+
+                            <!-- Quadruped Robot with Mounted Thermal Payload in front of Switchgear (Picture5.png) -->
+                            <div class="relative flex flex-col items-center pr-2">
+                                <svg viewBox="0 0 130 120" class="w-32 h-32">
+                                    <!-- Grey Switchgear Cabinets Background -->
+                                    <rect x="8" y="10" width="32" height="75" fill="#334155" stroke="#475569"
+                                        stroke-width="1.2" />
+                                    <rect x="40" y="10" width="32" height="75" fill="#334155" stroke="#475569"
+                                        stroke-width="1.2" />
+                                    <rect x="72" y="10" width="32" height="75" fill="#334155" stroke="#475569"
+                                        stroke-width="1.2" />
+                                    <!-- Meters & Indicator Lights on Switchgear -->
+                                    <rect x="18" y="20" width="10" height="10" fill="#0F172A" />
+                                    <rect x="50" y="20" width="10" height="10" fill="#0F172A" />
+                                    <circle cx="20" cy="42" r="2" fill="#EF4444" />
+                                    <circle cx="26" cy="42" r="2" fill="#10B981" />
+                                    <!-- Quadruped Robot Body -->
+                                    <rect x="48" y="64" width="46" height="16" rx="4" fill="#CBD5E1" stroke="#1E293B"
+                                        stroke-width="1.5" />
+                                    <!-- Thermal Screen on Quadruped Chest -->
+                                    <rect x="53" y="68" width="10" height="8" rx="1" fill="#38BDF8" />
+                                    <circle cx="58" cy="72" r="2.5" fill="#EF4444" />
+                                    <!-- Optical/Thermal Camera Payload on Mast -->
+                                    <rect x="58" y="44" width="24" height="11" rx="3" fill="#E2E8F0" stroke="#0F172A"
+                                        stroke-width="1.2" />
+                                    <circle cx="64" cy="49.5" r="3.5" fill="#0F172A" stroke="#38BDF8"
+                                        stroke-width="1.2" />
+                                    <line x1="70" y1="55" x2="70" y2="64" stroke="#0F172A" stroke-width="4" />
+                                    <!-- Articulated Quadruped Legs -->
+                                    <path d="M54 80 L48 96 L52 110" stroke="#0F172A" stroke-width="4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M64 80 L60 95 L63 108" stroke="#1E293B" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M82 80 L78 96 L82 110" stroke="#0F172A" stroke-width="4"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M90 80 L88 94 L92 107" stroke="#1E293B" stroke-width="3.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card Copy -->
+                        <div class="p-6 sm:p-7 space-y-3">
+                            <h3 class="font-display font-bold text-xl text-white">
+                                NFPA 70B Audit &amp; Defect Checklists
+                            </h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Field tested scoring templates for electrical wear, phase disconnections, and low to
+                                medium voltage switchgear, structured to help your team standardize supplemental
+                                training records under the mandatory NFPA 70B standard.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="px-6 py-3 bg-navy-950/80 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400 italic">
+                        <span>Automated thermal and visual scanning across low to medium voltage switchgear.</span>
+                        <span class="font-mono not-italic text-brand-cyan ml-2 shrink-0">Picture5.png</span>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Thermal & Visual Fault Identification Guide (Interactive Simulator Preview) -->
+                <div
+                    class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
+                    <div>
+                        <!-- Interactive 12-Scenario Thermal Simulator Header -->
+                        <div
+                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 flex flex-col justify-between">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="px-2.5 py-1 rounded bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan font-mono text-[11px]">
+                                    TEMPLATE 03 • 12-SCENARIO SIMULATOR GUIDE
+                                </span>
+                                <div
+                                    class="flex items-center gap-1 bg-navy-950 p-1 rounded-lg border border-navy-700 text-[11px] font-mono">
+                                    <button type="button" id="btnDefect" onclick="toggleThermalMode('defect')"
+                                        class="px-2.5 py-1 rounded bg-amber-500 text-navy-950 font-bold transition-all">
+                                        Real Defect (+7.2°F)
+                                    </button>
+                                    <button type="button" id="btnArtifact" onclick="toggleThermalMode('artifact')"
+                                        class="px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all">
+                                        Scale Artifact
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Dynamic Thermal Readout Display -->
+                            <div id="thermalDisplayBox"
+                                class="my-auto grid grid-cols-12 gap-3 items-center bg-navy-950/90 border border-amber-500/40 rounded-xl p-3">
+                                <div class="col-span-8 space-y-1">
+                                    <div id="thermalTitle" class="text-xs font-mono font-bold text-amber-400 uppercase">
+                                        SCENARIO #04: FAILING CONDENSER / LOOSE LUG
+                                    </div>
+                                    <p id="thermalDesc" class="text-xs text-slate-300">
+                                        Localized asymmetric hotspot (+7.2°F delta vs adjacent phase). Verified within
+                                        ±1.1°F by handheld thermography.
+                                    </p>
+                                </div>
+                                <div class="col-span-4 text-right font-mono">
+                                    <div id="thermalTemp" class="text-xl font-extrabold text-amber-400">104.8°F</div>
+                                    <div id="thermalAction" class="text-[10px] text-rose-400 uppercase">Action: Escalate
+                                        L3</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Copy -->
+                        <div class="p-6 sm:p-7 space-y-3">
+                            <h3 class="font-display font-bold text-xl text-white">
+                                Thermal &amp; Visual Fault Identification Guide
+                            </h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                Practical benchmarks from our 12 scenario simulator showing technicians how to separate
+                                real overheating defects (like loose breaker lugs) from harmless thermal scale
+                                artifacts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="px-6 py-3 bg-navy-950/80 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400 italic">
+                        <span>Interactive toggle: Test how technicians separate true thermal faults from scale
+                            reflections.</span>
+                        <span class="font-mono not-italic text-amber-400 ml-2 shrink-0">12 Scenarios</span>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Port by Port Fiber Rack Grading Rubric (with Picture2.png representation) -->
+                <div
+                    class="rounded-2xl bg-navy-900 border border-navy-700/90 hover:border-brand-cyan/50 transition-all overflow-hidden flex flex-col justify-between shadow-xl">
+                    <div>
+                        <!-- Visual Scene representing Picture2.png: Technician terminating cyan fiber cables with Robot Coach -->
+                        <div
+                            class="h-56 bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 border-b border-navy-800 p-5 relative flex items-center justify-between overflow-hidden">
+                            <div class="z-10 space-y-2 max-w-[58%]">
+                                <span
+                                    class="px-2.5 py-1 rounded bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono text-[11px]">
+                                    TEMPLATE 04 • ROBOT COACH RUBRIC
+                                </span>
+                                <div class="text-sm font-display font-bold text-white pt-1">
+                                    Automated Port-by-Port Verification
+                                </div>
+                                <div class="grid grid-cols-2 gap-1.5 pt-1 text-[11px] font-mono">
+                                    <div class="text-emerald-400">✓ LC Polarity &amp; Seating</div>
+                                    <div class="text-emerald-400">✓ Bend Radius Check</div>
+                                    <div class="text-emerald-400">✓ Dust Caps Installed</div>
+                                    <div class="text-brand-cyan">★ Saves 45+ Mins/Panel</div>
+                                </div>
+                            </div>
+
+                            <!-- Technician + Robot Coach Illuminating Cyan Fiber Patch Panel SVG (Picture2.png) -->
+                            <div class="relative flex flex-col items-center pr-2">
+                                <svg viewBox="0 0 130 125" class="w-32 h-32">
+                                    <!-- Open Fiber Patch Rack on Right -->
+                                    <rect x="92" y="8" width="28" height="108" fill="#090E1A" stroke="#334155"
+                                        stroke-width="1.5" />
+                                    <!-- Cyan Fiber Optic Patch Cords -->
+                                    <path d="M94 28 Q82 45 94 65" stroke="#38BDF8" stroke-width="2.5" fill="none" />
+                                    <path d="M94 34 Q80 55 94 78" stroke="#06B6D4" stroke-width="2.5" fill="none" />
+                                    <rect x="95" y="24" width="20" height="6" fill="#38BDF8" />
+                                    <rect x="95" y="34" width="20" height="6" fill="#38BDF8" />
+                                    <rect x="95" y="44" width="20" height="6" fill="#38BDF8" />
+                                    <!-- Robot Coach Mast & Cyan Inspection Spotlight -->
+                                    <polygon points="75,28 95,18 95,52" fill="rgba(56, 189, 248, 0.35)" />
+                                    <rect x="64" y="22" width="12" height="8" rx="2" fill="#0F172A" stroke="#38BDF8"
+                                        stroke-width="1.5" />
+                                    <rect x="68" y="30" width="4" height="52" fill="#94A3B8" />
+                                    <rect x="54" y="82" width="32" height="24" rx="4" fill="#CBD5E1" stroke="#1E293B" />
+                                    <circle cx="60" cy="108" r="6" fill="#090E1A" />
+                                    <circle cx="80" cy="108" r="6" fill="#090E1A" />
+                                    <!-- Technician Working on Fiber Ports -->
+                                    <circle cx="34" cy="26" r="10" fill="#F1F5F9" />
+                                    <path d="M18 112 L22 44 L44 44 L48 112 Z" fill="#1E293B" />
+                                    <!-- Technician Arms reaching to Fiber Panel -->
+                                    <path d="M40 50 L65 48 L92 36" stroke="#CBD5E1" stroke-width="5"
+                                        stroke-linecap="round" fill="none" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card Copy -->
+                        <div class="p-6 sm:p-7 space-y-3">
+                            <h3 class="font-display font-bold text-xl text-white">
+                                Port by Port Fiber Rack Grading Rubric
+                            </h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                The exact punch list criteria our autonomous "Robot Coach" uses to verify LC connectors,
+                                polarity, bend radius, dust caps, and labeling, saving senior leads 45+ minutes of
+                                manual verification per practice panel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="px-6 py-3 bg-navy-950/80 border-t border-navy-800 flex items-center justify-between text-xs text-slate-400 italic">
+                        <span>Robot Supervised Fiber Training ("Robot Coach") verifying hands on port terminations and
+                            cable dressing in minutes.</span>
+                        <span class="font-mono not-italic text-brand-cyan ml-2 shrink-0">Picture2.png</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILT FOR MISSION CRITICAL TEAMS + BOTTOM HIGH-CONVERSION OPT-IN BANNER -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-navy-900 to-navy-950">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="rounded-3xl bg-navy-800/90 border border-brand-cyan/30 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+
+                <!-- Decorative Corner Grid Accent -->
+                <div class="max-w-3xl mx-auto text-center space-y-6 relative z-10">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-mono font-semibold uppercase">
+                        Built for Mission Critical Teams
+                    </div>
+
+                    <h2
+                        class="font-display font-extrabold text-2xl sm:text-4xl text-white tracking-tight leading-tight">
+                        Designed for Chief Operating Engineers, Directors of Critical Facilities, and Data Center
+                        L&amp;D Leaders scaling technician readiness without sacrificing uptime.
+                    </h2>
+
+                    <!-- Role Pills -->
+                    <div class="flex flex-wrap items-center justify-center gap-2.5 pt-1">
+                        <span
+                            class="px-3.5 py-1.5 rounded-full bg-navy-900 border border-navy-700 text-xs font-medium text-slate-200">
+                            Chief Operating Engineers
+                        </span>
+                        <span
+                            class="px-3.5 py-1.5 rounded-full bg-navy-900 border border-navy-700 text-xs font-medium text-slate-200">
+                            Directors of Critical Facilities
+                        </span>
+                        <span
+                            class="px-3.5 py-1.5 rounded-full bg-navy-900 border border-navy-700 text-xs font-medium text-slate-200">
+                            Data Center L&amp;D Leaders
+                        </span>
+                    </div>
+
+                    <!-- Bottom Opt-In Form -->
+                    <form onsubmit="handleKitUnlock(event, 'bottomEmailInput')"
+                        class="pt-4 max-w-2xl mx-auto space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <label for="bottomEmailInput" class="sr-only">Work Email Address</label>
+                            <input type="email" id="bottomEmailInput" required
+                                placeholder="Enter your work email address..."
+                                class="flex-1 px-4 py-4 rounded-xl bg-navy-950 border border-navy-700 text-white placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20">
+                            <button type="submit"
+                                class="px-7 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-sky-400 hover:from-sky-400 hover:to-brand-cyan text-navy-950 font-display font-bold text-sm sm:text-base tracking-tight shadow-lg shadow-brand-cyan/25 transition-all cursor-pointer shrink-0">
+                                Send Me the Free CRSC Benchmark Kit
+                            </button>
+                        </div>
+
+                        <!-- Micro Proof & Trust Line -->
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            100% free instant download. Includes early access updates on Pilot 3 (Online Technician
+                            Courses) &amp; Pilot 4 (Robot Supervised Fiber Training). Unsubscribe in one click.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 border-t border-navy-800/80 py-10 text-xs text-slate-400">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="font-display font-bold text-white text-sm">FACILITYOPS<span
+                        class="text-brand-cyan">.ai</span></span>
+                <span>•</span>
+                <span>Houston CRSC Data Center Pilot Validated</span>
+            </div>
+            <div>
+                © 2026 FACILITYOPS.ai. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INSTANT BENCHMARK KIT UNLOCK MODAL (No native alert() used) -->
+    <div id="kitModal"
+        class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm">
+        <div
+            class="bg-navy-900 border border-brand-cyan/50 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-5 relative animate-fadeIn">
+            <button onclick="closeKitModal()"
+                class="absolute top-4 right-4 text-slate-400 hover:text-white p-1.5 rounded-lg bg-navy-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-semibold">
+                <span>✓ INSTANT ACCESS UNLOCKED</span>
+            </div>
+
+            <div class="space-y-1.5">
+                <h3 class="font-display font-bold text-2xl text-white">
+                    Your 2026 CRSC Benchmark Kit is Ready
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300">
+                    We have dispatched a copy to <span id="confirmedEmail"
+                        class="text-brand-cyan font-mono font-semibold">your inbox</span> and unlocked direct access to
+                    the four CRSC pilot files below:
+                </p>
+            </div>
+
+            <!-- Downloadable Kit Assets List -->
+            <div class="space-y-2.5 pt-1">
+                <div
+                    class="flex items-center justify-between p-3 rounded-xl bg-navy-950 border border-navy-800 hover:border-brand-cyan/40 transition-colors">
+                    <div>
+                        <div class="text-xs sm:text-sm font-semibold text-white">1. Autonomous vs. Manual Inspection
+                            Baselines</div>
+                        <div class="text-[11px] font-mono text-slate-400">CRSC_1600_Telemetry_Baselines_2026.xlsx</div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded bg-brand-cyan/15 text-brand-cyan font-mono text-xs">XLSX</span>
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-3 rounded-xl bg-navy-950 border border-navy-800 hover:border-brand-cyan/40 transition-colors">
+                    <div>
+                        <div class="text-xs sm:text-sm font-semibold text-white">2. NFPA 70B Audit &amp; Switchgear
+                            Checklists</div>
+                        <div class="text-[11px] font-mono text-slate-400">NFPA_70B_Switchgear_Audit_Template.pdf</div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 font-mono text-xs">PDF</span>
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-3 rounded-xl bg-navy-950 border border-navy-800 hover:border-brand-cyan/40 transition-colors">
+                    <div>
+                        <div class="text-xs sm:text-sm font-semibold text-white">3. 12-Scenario Thermal &amp; Visual
+                            Fault Guide</div>
+                        <div class="text-[11px] font-mono text-slate-400">CRSC_Thermal_Fault_Simulator_Guide.pdf</div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 font-mono text-xs">PDF</span>
+                </div>
+
+                <div
+                    class="flex items-center justify-between p-3 rounded-xl bg-navy-950 border border-navy-800 hover:border-brand-cyan/40 transition-colors">
+                    <div>
+                        <div class="text-xs sm:text-sm font-semibold text-white">4. Port-by-Port Fiber Rack Grading
+                            Rubric</div>
+                        <div class="text-[11px] font-mono text-slate-400">Robot_Coach_Fiber_Grading_Rubric.pdf</div>
+                    </div>
+                    <span class="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 font-mono text-xs">PDF</span>
+                </div>
+            </div>
+
+            <div class="pt-2 flex justify-end">
+                <button onclick="closeKitModal()"
+                    class="w-full py-3 rounded-xl bg-brand-cyan text-navy-950 font-display font-bold text-sm hover:bg-sky-300 transition-colors cursor-pointer">
+                    Done &amp; Return to Briefing
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Handle Opt-In Form Submission and open the instant download modal
+        function handleKitUnlock(event, inputId) {
+            event.preventDefault();
+            const emailInput = document.getElementById(inputId);
+            const emailValue = emailInput ? emailInput.value.trim() : '';
+            const confirmedEmailSpan = document.getElementById('confirmedEmail');
+
+            if (emailValue && confirmedEmailSpan) {
+                confirmedEmailSpan.textContent = emailValue;
+            }
+
+            const modal = document.getElementById('kitModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeKitModal() {
+            const modal = document.getElementById('kitModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Interactive toggle for Card 3 (Real Thermal Defect vs. Scale Artifact)
+        function toggleThermalMode(mode) {
+            const btnDefect = document.getElementById('btnDefect');
+            const btnArtifact = document.getElementById('btnArtifact');
+            const displayBox = document.getElementById('thermalDisplayBox');
+            const title = document.getElementById('thermalTitle');
+            const desc = document.getElementById('thermalDesc');
+            const temp = document.getElementById('thermalTemp');
+            const action = document.getElementById('thermalAction');
+
+            if (mode === 'defect') {
+                btnDefect.className = 'px-2.5 py-1 rounded bg-amber-500 text-navy-950 font-bold transition-all';
+                btnArtifact.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all';
+                displayBox.className = 'my-auto grid grid-cols-12 gap-3 items-center bg-navy-950/90 border border-amber-500/40 rounded-xl p-3';
+                title.className = 'text-xs font-mono font-bold text-amber-400 uppercase';
+                title.textContent = 'SCENARIO #04: FAILING CONDENSER / LOOSE LUG';
+                desc.textContent = 'Localized asymmetric hotspot (+7.2°F delta vs adjacent phase). Verified within ±1.1°F by handheld thermography.';
+                temp.className = 'text-xl font-extrabold text-amber-400';
+                temp.textContent = '104.8°F';
+                action.className = 'text-[10px] text-rose-400 uppercase';
+                action.textContent = 'Action: Escalate L3';
+            } else {
+                btnArtifact.className = 'px-2.5 py-1 rounded bg-brand-cyan text-navy-950 font-bold transition-all';
+                btnDefect.className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white transition-all';
+                displayBox.className = 'my-auto grid grid-cols-12 gap-3 items-center bg-navy-950/90 border border-brand-cyan/40 rounded-xl p-3';
+                title.className = 'text-xs font-mono font-bold text-brand-cyan uppercase';
+                title.textContent = 'SCENARIO #09: AUTO-RANGE SCALE ARTIFACT';
+                desc.textContent = 'Uniform surface warmth across enclosure with narrow auto-scale span. No phase-to-phase delta present.';
+                temp.className = 'text-xl font-extrabold text-emerald-400';
+                temp.textContent = '81.2°F';
+                action.className = 'text-[10px] text-emerald-400 uppercase';
+                action.textContent = 'Status: Normal Load';
+            }
+        }
+    </script>
+</body>
+
+</html>
